@@ -61,9 +61,13 @@ class userpack {
 
 	
 	
-	
+	public userpack() {
+		SetUp();
+		PlaySetUp();
+	}
 	public static void SetUp() {
 		//SETUP SETUP 
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		//NAME
 		System.out.println("Beginning 'Fun' Customization!");
@@ -153,6 +157,7 @@ class userpack {
 	}
 
 	private static int VarSet(String prompt, int a ,int b, int c, int d, int e, int f,int g) {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(prompt);
 		char ans = scanner.next().charAt(0);
