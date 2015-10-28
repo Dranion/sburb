@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Index {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		boolean menu = true;
 		while(menu) {
@@ -20,8 +21,51 @@ public class Index {
 				System.out.println("Are you sure? (True/False)");
 				if(scanner.nextBoolean()) {
 					menu = false;
-					userpack.SetUp();
-					userpack.PlaySetUp();
+					userpack p1 = new userpack();
+					/*boolean correct = false;
+					do {
+						System.out.println("How many people are participating in your game? (up to 12");
+						int pnum = scanner.nextInt();
+						if(pnum >= 2) {
+							correct = true;
+							userpack p2 = new userpack();
+							if(pnum >= 3){
+							userpack p3 = new userpack();
+							}
+							if(pnum >= 4){
+							userpack p4 = new userpack();
+							}
+							if(pnum >=5){
+							userpack p5 = new userpack();
+							}
+							if(pnum >=6){
+							userpack p6 = new userpack();
+							}
+							if(pnum >=7){
+							userpack p7 = new userpack();
+							}
+							if(pnum >=8){
+							userpack p8 = new userpack();
+							}
+							if(pnum >=9){
+							userpack p9 = new userpack();
+							}
+							if(pnum >=10){
+							userpack p10 = new userpack();
+							}
+							if(pnum >=11){
+							userpack p11 = new userpack();
+							}
+							if(pnum >=12){
+							userpack p12 = new userpack();
+							}
+							if(pnum >12){
+								correct = false;
+							}
+						}
+					} while (correct != true);*/
+
+					
 				}
 			}
 			else if(ans == 'l') {
