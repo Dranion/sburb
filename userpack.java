@@ -3,137 +3,131 @@ class userpack {
 	//*~*~*~*~*~*~*~*~*~*~*
 	//| SET UP VARIABLES  |
 	//*~*~*~*~*~*~*~*~*~*~*
-	public static String fname;
-	public static String lname;
-	public static int age =13;
+	String fname = "John";
+	String lname = "Egbert";
+	int age = 13;
 	//gender stuff
-	public static String man;
-	public static String they;
-	public static String them;
-	public static String their;
-	public static String theirs;
-	public static String themself;
+	String man;
+	String they;
+	String them;
+	String their;
+	String theirs;
+	String themself;
 	//physical stuff
-	public static String eyecolor;
-	public static  String haircolor;
-	public static String skincolor;
-	public static int height;
-	public static int weight;
+	String eyecolor;
+	String haircolor;
+	String skincolor;
+	int height;
+	int weight;
 	//clothing stuff
-	public static String top;
-	public static String topcolor;
-	public static String topsymbol;
-	public static String bottom;
-	public static String bottomcolor;
-	public static String shoes;
-	public static String shoecolor;
+	String top;
+	String topcolor;
+	String topsymbol;
+	String bottom;
+	String bottomcolor;
+	String shoes;
+	String shoecolor;
 	
 	//*~*~*~*~*~*~*~*~*~*~*~*
 	//| GAME PLAY VARIABLES |
 	//*~*~*~*~*~*~*~*~*~*~*~*
-	public static int hp = 0;
-	public static int str = 15;
-	public static int dex = 14;
-	public static int con = 13;
-	public static int intel = 12;
-	public static int wis = 10;
-	public static int cha = 8;
-	public static int will = 0;
-	public static int reflex = 0;
-	public static int fortitude = 0;
-	public static int ac = 0;
-	public static int lvl = 1;
-	public static int speed = 0;
-	public static int atk = 0;
-	public static int xp = 0;
-	//15,14,13,12,10,8
+	int hp = 0;
+	int str = 15;
+	int dex = 14;
+	int con = 13;
+	int intel = 12;
+	int wis = 10;
+	int cha = 8;
+	int will = 0;
+	int reflex = 0;
+	int fortitude = 0;
+	int ac = 0;
+	int lvl = 1;
+	int speed = 0;
+	int atk = 0;
+	int xp = 0;
 	
 	//'joke' variables
-	public static int pulchritude = 0;
-	public static int pranksters_gambit = 0;
-	public static int imagination = 0;
-	public static int vim = 0;
-	public static int blood_sugar = 0;
-	public static int etiquette = 0;
-	public static int hysteria = 0;
-	public static int nerves = 0;
-	public static int sick_burn = 0;
+	int pulchritude = 0;
+	int pranksters_gambit = 0;
+	int imagination = 0;
+	int vim = 0;
+	int blood_sugar = 0;
+	int etiquette = 0;
+	int hysteria = 0;
+	int nerves = 0;
+	int sick_burn = 0;
 
 	
 	
 	public userpack() {
-		SetUp();
-		PlaySetUp();
-	}
-	public static void SetUp() {
-		//SETUP SETUP 
+				//SETUP SETUP 
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		//NAME
 		System.out.println("Beginning 'Fun' Customization!");
 		System.out.println("What is your first name? ");
-		fname = scanner.nextLine();
+		this.fname = scanner.nextLine();
 		System.out.println("What is your last name? ");
-		lname = scanner.nextLine();
-		System.out.println("Welcome " + fname.toUpperCase() + " " + lname.toUpperCase());
+		this.lname = scanner.nextLine();
+		System.out.println("Welcome " + this.fname.toUpperCase() + " " + this.lname.toUpperCase());
 		//PRONOUNS
 		System.out.println("Now determing your pronouns!");
 		System.out.println("You are a young (woman, man, girl, enby, cat, ?): ");
-		man = scanner.nextLine();
+		this.man = scanner.nextLine();
 		System.out.println("She, he, they....: ");
-		they = scanner.nextLine();
+		this.they = scanner.nextLine();
 		System.out.println("Her, him, them...: ");
-		them = scanner.nextLine();
+		this.them = scanner.nextLine();
 		System.out.println("Her, His, Their...: ");
-		their = scanner.nextLine();
+		this.their = scanner.nextLine();
 		System.out.println("Hers, His, Theirs...:");
-		theirs = scanner.nextLine();
+		this.theirs = scanner.nextLine();
 		System.out.println("Herself, Himself, Themself...: ");
-		themself = scanner.nextLine();
-		System.out.println("Your pronouns are " + they + "/" + them + "/" + their + "/" + theirs + "/" + themself + " and you are a " + man + "!");
+		this.themself = scanner.nextLine();
+		System.out.println("Your pronouns are " + this.they + "/" + this.them + "/" + this.their + "/" + this.theirs + "/" + this.themself + " and you are a " + this.man + "!");
 		//APPERANCE
 		System.out.println("You have what color eyes? ");
-		eyecolor = scanner.nextLine();
+		this.eyecolor = scanner.nextLine();
 		System.out.println("you have what color hair? ");
-		haircolor = scanner.nextLine();
+		this.haircolor = scanner.nextLine();
 		System.out.println("You have what color skin? ");
-		skincolor = scanner.nextLine();
+		this.skincolor = scanner.nextLine();
 		System.out.println("How tall are you in cm? ");
-		height = scanner.nextInt();
+		this.height = scanner.nextInt();
 		System.out.println("How many kilograms do you weigh? ");
-		weight = scanner.nextInt();
+		this.weight = scanner.nextInt();
 		System.out.println("You have " + eyecolor + " eyes and " + haircolor + " hair. You have " + skincolor + " skin, and are " + height + " cm tall and weigh " + weight + " kg!");
 		System.out.println("Would you like to go more in-depth into appearance? (True/False)");
 		Boolean moreapp = scanner.nextBoolean();
-		top = "shirt";
-		topcolor = "white";
-		topsymbol ="generic symbol";
-		bottom = "pants";
-		bottomcolor = "gray";
-		shoes = "shoes";
-		shoecolor = "gray";
+		this.top = "shirt";
+		this.topcolor = "white";
+		this.topsymbol ="generic symbol";
+		this.bottom = "pants";
+		this.bottomcolor = "gray";
+		this.shoes = "shoes";
+		this.shoecolor = "gray";
 		if(moreapp) {
 			System.out.println("Okay! What top are you wearing? ");
-			top = scanner.nextLine();
-			top = scanner.nextLine();
+			this.top = scanner.nextLine();
+			this.top = scanner.nextLine();
 			System.out.println("What color is the top? ");
-			topcolor = scanner.nextLine();
+			this.topcolor = scanner.nextLine();
 			System.out.println("What symbol does your top have? ");
-			topsymbol = scanner.nextLine();
+			this.topsymbol = scanner.nextLine();
 			System.out.println("What bottom are you wearing? ");
-			bottom = scanner.nextLine();
-			System.out.println("What color are your " + bottom + "?");
-			bottomcolor = scanner.nextLine();
+			this.bottom = scanner.nextLine();
+			System.out.println("What color are your " + this.bottom + "?");
+			this.bottomcolor = scanner.nextLine();
 			System.out.println("What shoes are you wearing? ");
-			shoes = scanner.nextLine();
+			this.shoes = scanner.nextLine();
 			System.out.println("What color are they?");
-			shoecolor = scanner.nextLine();
+			this.shoecolor = scanner.nextLine();
 		}
-		System.out.println("You are wearing a " + topcolor + " " + top + " with a " + topsymbol + " on it. You are also wearing " + bottomcolor + " " + bottom + " with " + shoecolor + " " + shoes + ".");
+		System.out.println("You are wearing a " + this.topcolor + " " + this.top + " with a " + this.topsymbol + " on it. You are also wearing " + this.bottomcolor + " " + this.bottom + " with " + this.shoecolor + " " + this.shoes + ".");
 		System.out.println("Congratulations! The 'Fun' Customization is over.");
-			
-		}
-	public static void PlaySetUp() {
+		
+		
 		System.out.println("Welcome to your actual character setup!");
 		System.out.println("Generating values...");
 		int a = GameMechanics.DiceRollNum(1,6,3);
@@ -145,17 +139,19 @@ class userpack {
 		int g = GameMechanics.DiceRollNum(1,6,3);
 		System.out.println("Your possible scores are: \na: " + a + "\nb: " + b + "\nc: " + c  + "\nd: " + d + "\ne: " + e + "\nf: " + f + "\ng: " + g);
 		System.out.println("You are setting your strenght, dextery, constitution, intellegence, wisdom , and charisma.");
-		str = VarSet("STRENGTH: ", a, b, c, d, e, f,g);
-		dex = VarSet("DEXTERITY:  ", a, b, c, d, e, f,g);
-		con = VarSet("CONSTITUTION: ", a, b, c, d, e, f,g);
-		intel = VarSet("INTELLEGENCE: ", a, b, c, d, e, f,g);
-		wis = VarSet("WIDSOM: ",a,b,c,d,e,f,g);
-		cha = VarSet("CHARISMA: ", a, b, c, d, e, f,g);
+		this.str = VarSet("STRENGTH: ", a, b, c, d, e, f,g);
+		this.dex = VarSet("DEXTERITY:  ", a, b, c, d, e, f,g);
+		this.con = VarSet("CONSTITUTION: ", a, b, c, d, e, f,g);
+		this.intel = VarSet("INTELLEGENCE: ", a, b, c, d, e, f,g);
+		this.wis = VarSet("WIDSOM: ",a,b,c,d,e,f,g);
+		this.cha = VarSet("CHARISMA: ", a, b, c, d, e, f,g);
 		System.out.println("Congrats! Here is your character sheet.");
 		CharSheet();
 		
 	}
-
+}
+public static void main(String args[]){
+}
 	private static int VarSet(String prompt, int a ,int b, int c, int d, int e, int f,int g) {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
