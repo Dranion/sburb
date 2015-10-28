@@ -1,23 +1,29 @@
 
-FILE IS IN PROGRESS!!!
 # sburb
 An attempt at making a (text-based) game based on the game SBURB from Homestuck. This is at the moment an incomplete project, and would be marked private if it was possible. Irregardless, please feel free to contribute code / fork if you think there could be something useful, though I ask that only people who have read Homestuck do this. 
 
-------------------COPYRIGHT INFORMATION----------------
+<br>------------------COPYRIGHT INFORMATION----------------<br>
 All code belongs to Drew Thompson under the MIT License. This means that you are free to take and use for any purpose any pieces of code, provided that you credit the owner (Drew Thompson). 
 
 The concept that this game is based on is the property of Andrew Hussie. No profit will be made of this game, as it is just a fun fan project! Credit for all the 'fun variables' and basic game structure goes to Andrew Hussie. 
 
--------------------INSTALLING---------------------------
+<br>-------------------INSTALLING---------------------------<br>
 This game is not complete enough to really install or configure yet. Just download the project and run 'Index.java' to begin, though I can't guarantee it will work. 
 
--------------------AUTHORS------------------------------
-DREW THOMPSON
+<br>-------------------AUTHORS------------------------------<br>
+DREW THOMPSON<br>
 hi! im drew. i am the only one working on this atm. please help, ive only been working with java for like, a month and i will cry. im a student in highschool, im failing a couple classes, why am i making a game??? we just dont know. 
 
-------------------CONTACT INFORMATION--------------------
-The 
-name of the projects and all sub-modules and libraries (sometimes they are named different and very confusing to new users)
+<br>------------------CONTACT INFORMATION--------------------<br>
+You can contact the official project at textstuck@gmail.com<br>
+You can find the official website at textstuckgame.tumblr.com<br>
+If you find any bugs in pieces of code marked '//COMPLETE', please tell me! <br>
+If you want to request any features for me to add, or have any recommendations, please tell me! <br>
+I'm always open to talk, so feel free to contact me about anything in realation to this project. <br>
+
+<br>---------------------------------------------------------------<br> 
+
+<!--name of the projects and all sub-modules and libraries (sometimes they are named different and very confusing to new users)
 descriptions of all the project, and all sub-modules and libraries
 5-line code snippet on how its used (if it's a library)
 copyright and licensing information (or "Read LICENSE")
@@ -28,4 +34,4 @@ list of authors or "Read AUTHORS"
 instructions to submit bugs, feature requests, submit patches, join mailing list, get announcements, or join the user or dev community in other forms
 other contact info (email address, website, company name, address, etc)
 a brief history if it's a replacement or a fork of something else
-legal notices (crypto stuff)
+legal notices (crypto stuff)-->
