@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class Act1 {
 
@@ -5,6 +7,7 @@ public class Act1 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("");
 		System.out.println("WELCOME TO SBURB, "  + p1.fname.toUpperCase() + " " + pl.lname.toUpperCase() + "!");
+		house p1home = new house();
 		
 
 	}
