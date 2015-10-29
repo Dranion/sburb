@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 class house {
-  String[] scematics = {};
+  List<String> scematics = new ArrayList<String>();
   int housey;
   int housex;
-  public house {
+  public house() {
+	  @SuppressWarnings("resource")
+	Scanner scanner = new Scanner(System.in);
 	  	System.out.println("Please structure the first floor of your house!");
 		  System.out.println("- is empty space \n + is furniture \n = is a wall \n @ is you \n # is an electronic \n % is a misc object");
   		System.out.println("Please do not exceed 100 characters per line.");
@@ -15,7 +21,7 @@ class house {
 	  	for(int i = 1; i <= housey; i++){
 		  	System.out.print("Line " + i + ": ");
 		  	String ln = scanner.next();
-		  	this.house.scematics = scematics + ln; 
+		  	scematics.add(ln);
 		  }
   }
 }
