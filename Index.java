@@ -22,7 +22,7 @@ public class Index {
 				if(scanner.nextBoolean()) {
 					menu = false;
 					userpack p1 = new userpack();
-					/*boolean correct = false;
+					boolean correct = false;
 					do {
 						System.out.println("How many people are participating in your game? (up to 12");
 						int pnum = scanner.nextInt();
@@ -63,7 +63,7 @@ public class Index {
 								correct = false;
 							}
 						}
-					} while (correct != true);*/
+					} while (correct != true);
 
 					
 				}
