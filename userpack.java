@@ -149,7 +149,6 @@ class userpack {
 		CharSheet();
 		
 	}
-}
 public static void main(String args[]){
 }
 	private static int VarSet(String prompt, int a ,int b, int c, int d, int e, int f,int g) {
@@ -189,7 +188,7 @@ public static void main(String args[]){
 		
 	}
 		
-	public static void CharSheet() {
+	public void CharSheet() {
 		System.out.println("----------------------------------");
 		System.out.println(fname + " " + lname + "\tLVL" + lvl);
 		System.out.println("----------------------------------");
@@ -240,7 +239,7 @@ public static void main(String args[]){
 		System.out.println("----------------------------------");
 
 	}
-	private static void Hp() {
+	private void Hp() {
 		hp += GameMechanics.DiceRoll(1,10);
 	}
 }
