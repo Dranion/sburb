@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class userpack {
+class userpack extends GameMechanics{
 	//*~*~*~*~*~*~*~*~*~*~*
 	//| SET UP VARIABLES  |
 	//*~*~*~*~*~*~*~*~*~*~*
@@ -62,7 +62,6 @@ class userpack {
 	
 	public userpack() {
 				//SETUP SETUP 
-		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		//NAME
 		System.out.println("Beginning 'Fun' Customization!");
@@ -70,6 +69,7 @@ class userpack {
 		this.fname = scanner.nextLine();
 		System.out.println("What is your last name? ");
 		this.lname = scanner.nextLine();
+		this.age = CheckInt(scanner, "How old are you?");
 		System.out.println("Welcome " + this.fname.toUpperCase() + " " + this.lname.toUpperCase());
 		//PRONOUNS
 		System.out.println("Now determing your pronouns!");
@@ -93,10 +93,8 @@ class userpack {
 		this.haircolor = scanner.nextLine();
 		System.out.println("You have what color skin? ");
 		this.skincolor = scanner.nextLine();
-		System.out.println("How tall are you in cm? ");
-		this.height = scanner.nextInt();
-		System.out.println("How many kilograms do you weigh? ");
-		this.weight = scanner.nextInt();
+		this.height = CheckInt(scanner, "How tall are you in cm? ");
+		this.weight = CheckInt(scanner, "How many kilograms do you weigh?");
 		System.out.println("You have " + eyecolor + " eyes and " + haircolor + " hair. You have " + skincolor + " skin, and are " + height + " cm tall and weigh " + weight + " kg!");
 		System.out.println("Would you like to go more in-depth into appearance? (True/False)");
 		Boolean moreapp = scanner.nextBoolean();
