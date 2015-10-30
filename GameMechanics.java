@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class GameMechanics {
 	Random rand = new Random(); 
@@ -17,7 +18,7 @@ public class GameMechanics {
 		}
 		return sum;
 	}
-	public static CheckInt(Scanner scanner, String prompt){
+	public static int CheckInt(Scanner scanner, String prompt){
 		System.out.print(prompt);
 		while (!scanner.hasNextInt()) {
 			scanner.nextLine();   // throw away offending token
@@ -26,13 +27,13 @@ public class GameMechanics {
 		}
 		return scanner.nextInt();
 	}
-	public static CheckString(Scanner scanner, String prompt){
+	public static boolean CheckBoolean(Scanner scanner, String prompt){
 		System.out.print(prompt);
-		while(!scanner.hasNextString()){
+		while(!scanner.hasNextBoolean()) {
 			scanner.nextLine();
-			System.out.println("Please enter a string.");
+			System.out.println("Please enter a boolean! (true/false)");
 			System.out.print(prompt);
 		}
-		return scanner.nextString();
+		return scanner.nextBoolean();
 	}
 }
