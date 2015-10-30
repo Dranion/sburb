@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Index {
+public class Index extends GameMechanics {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
@@ -18,14 +18,12 @@ public class Index {
 			char ans = scanner.next().charAt(0);
 			if(ans == 's') {
 				System.out.println("This will erase any old save files.");
-				System.out.println("Are you sure? (True/False)");
-				if(scanner.nextBoolean()) {
+				if(CheckBoolean(scanner, "Are you sure? (true/false)")) {
 					menu = false;
 					userpack p1 = new userpack();
 					boolean correct = false;
 					do {
-						System.out.println("How many people are participating in your game? (up to 12");
-						int pnum = scanner.nextInt();
+						int pnum = CheckInt(scanner,"How many people are participating in your game? (up to 12" );
 						if(pnum >= 2) {
 							correct = true;
 							userpack p2 = new userpack();
@@ -66,6 +64,9 @@ public class Index {
 					} while (correct != true);
 
 					
+				}
+				else {
+					System.out.println("Returning to main menu!");
 				}
 			}
 			else if(ans == 'l') {
