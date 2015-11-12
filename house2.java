@@ -34,11 +34,11 @@ public class house2 {
 	    //Generating first side wall! 
 	    housey.set(housey.size()-1, String.valueOf(templine));
 	    printHouse(housey);
-	    String templinee = addX(xhouse, tempran, templine, rand);
-	    housey.set(housey.size()-1, templinee);
+	    String[] tempaddX =  addX(xhouse, tempran, templine, rand);
+	    housey.set(housey.size()-1, tempaddX[0]);
 	    printHouse(housey);
 		int starty = housey.size() -1;
-		//int startx = 
+		int startx =  tempaddX[1];
 
 	}
 	public static void printHouse(List<String> housey){
@@ -47,14 +47,21 @@ public class house2 {
 	    	System.out.println(housey.get(i));
 	    }
 	}
-	public static String addX(int xhouse, int tempran, char[] templine, Random rand){
+	
+	
+	public static String[] addX(int xhouse, int tempran, char[] templine, Random rand){
 	    while(rand.nextInt(xhouse - tempran) + 1 > 1){
 	    	templine[tempran + 1] = '=';
 	    	System.out.println(tempran);
 	    	tempran++;
 	    }
-	    return String.valueOf(templine);
+        String ret[] = new String[2];
+        ret[0]= String.valueOf(templine);
+        ret[1] =  "" + tempran + 1;
+        return ret; //returning two values at once
 	}
+	
+	
 	public static List<String> addY(int yhouse, int starty, int startx, List<String> housey, Random rand){
 	    for(int i = rand.nextInt(yhouse - starty) + starty; i < yhouse-1; i++){
 		    char[] templine = housey.get(i).toCharArray();
