@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class house2 {
+public class housee {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
@@ -37,8 +37,25 @@ public class house2 {
 	    String[] tempaddX =  addX(xhouse, tempran, templine, rand);
 	    housey.set(housey.size()-1, tempaddX[0]);
 	    printHouse(housey);
-		int starty = housey.size() -1;
-		int startx =  tempaddX[1];
+	    
+		//Recording end of first wall vars 
+	    int starty = housey.size() -1;
+		int startx =  Integer.parseInt(tempaddX[1]);
+		System.out.println("("+ startx + ", " + starty + ")");
+		//Generating first y wall!
+		int i = 1;
+		System.out.println(starty - i);
+		tempran = rand.nextInt(24) - i;
+		while(tempran < yhouse && starty - i > 0){
+			templine = housey.get(starty - i).toCharArray();
+			templine[startx-1] = '=';
+			housey.set(starty - i, String.valueOf(templine));
+			i++;
+			tempran--;
+			System.out.println(tempran);
+			
+		}
+		printHouse(housey);
 
 	}
 	public static void printHouse(List<String> housey){
@@ -50,14 +67,18 @@ public class house2 {
 	
 	
 	public static String[] addX(int xhouse, int tempran, char[] templine, Random rand){
+		System.out.println("STARTING TEMPRAN: " + tempran);
 	    while(rand.nextInt(xhouse - tempran) + 1 > 1){
+	    	System.out.println(tempran);
 	    	templine[tempran + 1] = '=';
 	    	System.out.println(tempran);
 	    	tempran++;
 	    }
+	    System.out.println("ENDING TEMPRAN: " + tempran);
         String ret[] = new String[2];
         ret[0]= String.valueOf(templine);
-        ret[1] =  "" + tempran + 1;
+        ret[1] =  "" + (tempran+1);
+        System.out.println(ret[1]);
         return ret; //returning two values at once
 	}
 	
