@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class housee {
+public class house2 {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
@@ -43,18 +43,9 @@ public class housee {
 		int startx =  Integer.parseInt(tempaddX[1]);
 		System.out.println("("+ startx + ", " + starty + ")");
 		//Generating first y wall!
-		int i = 1;
-		System.out.println(starty - i);
-		tempran = rand.nextInt(24) - i;
-		while(tempran < yhouse && starty - i > 0){
-			templine = housey.get(starty - i).toCharArray();
-			templine[startx-1] = '=';
-			housey.set(starty - i, String.valueOf(templine));
-			i++;
-			tempran--;
-			System.out.println(tempran);
-			
-		}
+		List<List<String>> yret = addY(yhouse, starty, startx, housey, rand);
+		housey.addAll(yret.get(0));
+
 		printHouse(housey);
 
 	}
@@ -83,13 +74,26 @@ public class housee {
 	}
 	
 	
-	public static List<String> addY(int yhouse, int starty, int startx, List<String> housey, Random rand){
-	    for(int i = rand.nextInt(yhouse - starty) + starty; i < yhouse-1; i++){
-		    char[] templine = housey.get(i).toCharArray();
-		    templine[startx] = '=';
-		    housey.set(i, String.valueOf(templine));
-	    }
-	    return housey;
+	
+	public static List<List<String>> addY(int yhouse, int starty, int startx, List<String> housey, Random rand){
+		int i = 0;
+		System.out.println(starty - i);
+		int tempran = rand.nextInt(yhouse /2 + i );
+		while(tempran > 0 && starty - i > 0){
+			i++;
+			tempran--;
+			char[] templine = housey.get(starty - i).toCharArray();
+			templine[startx-1] = '=';
+			housey.set(starty - i, String.valueOf(templine));
+			System.out.println(tempran);
+		}
+		starty = starty - i;
+		List<List<String>> ret = {housey}; //CRYING @ JAVA AND VARIABLE TYPES 5EVER i use python not this nonsense.....
+		//{"continued", "screaming"} {"i", "dont", "know","how","lists","work","aaahhhhhh"} cjkkjkkk
+		List<String> rety = null;
+		rety.add(starty + "");
+		ret.add(rety);
+	    return ret;
 	}
 
 }
